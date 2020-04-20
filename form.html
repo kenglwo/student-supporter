@@ -1,0 +1,378 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+</head>
+<style>
+	body {
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+	input {
+		/* margin-bottom: 10px; */
+	}
+	input[name="student_id"] {
+		ime-mode: disabled;
+	}
+	span.required {
+		color: red;
+		margin-left: 10px;
+	}
+	div#note {
+		border: 2px solid black;
+	}
+</style>
+<body>
+	<div class = "jumbotron jumbotron-fluid">
+	<div class = "container">
+		<h1>学生サポーター登録申し込みフォーム</h1>
+	</div>
+	</div>
+	<!-- <form method="post" action="https://cgi.center.kobe&#45;u.ac.jp/cgi&#45;bin/mailform/mailform.cgi" onsubmit="doPreSubmit"();> -->
+	<!-- <form method="post" action="http://localhost/form/form_receive.php" onsubmit="doPreSubmit"();> -->
+	<!-- <div class = "container"> -->
+	<div class="container-fluid">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<form method="post" action="http://localhost/form2/thanks.php">
+					<input type="hidden" name="_sendto" value="xxxx&#64;port.kobe-u.ac.jp">  <!-- mail address -->
+					<input type="hidden" name="_subject" value="ホームページよりお問い合わせがありました">
+					<!-- <input type="hidden" name="_redirect" value="http://www.research.kobe&#45;u.ac.jp/istc&#45;xxx/thankyou.html"> -->
+
+
+						<!-- <div class = "form-group"> -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="exampleInputEmail1">氏名（漢字）</label><span class="required">※必須</span>
+									<input type="text" name="name" class="form-control" placeholder="" required><br>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="exampleInputEmail1">氏名（ふりがな）</label><span class="required">※必須</span>
+									<input type="text" name="name_furigana" class="form-control"><br>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="exampleInputEmail1">学籍番号</label><span class="required">※必須</span>
+									<input type="text" name="student_id" class="form-control" required><br>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<!-- TODO: 学部・研究科のセレクトボックスを作成 -->
+									<label for="exampleInputEmail1">所属</label><span class="required">※必須</span>
+									<input type="text" name="affiliation" class="form-control" placeholder="XXX学部 / XXX研究科" required><br>
+								</div>
+								
+								<div class="form-group col-md-6">
+									<label for="grade">学年</label><span class="required">※必須</span>
+									<select class="form-control" id="grade">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+									</select><br>
+								</div>
+							</div>
+
+							
+							<label for="exampleInputEmail1">携帯電話</label>
+							<input type="tel" name="tel" class="form-control" placeholder="000-1111-2222"><br>
+
+							<label for="exampleInputEmail1">メールアドレス（大学から受信可)</label><span class="required">※必須</span>
+							<input type="email" name="email" class="form-control" placeholder="XXXX@YYY" required><br>
+
+							<label for="exampleInputEmail1">メールアドレス（常に利用している)</label><span class="required">※必須</span>
+							<input type="email" name="email" class="form-control" placeholder="XXXX@YYY" required><br>
+
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>現時点でどのサポート活動に興味がありますか？</p>
+								</div>
+
+								<div class="col-md-7">
+									<div class="form-row mb-4">
+										<div class="col-md-4 pr-3">
+											<p>PCノートテイク</p>
+										</div>
+										<div class="col-md-8 pr-3">
+											<div class="form-group">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="pc-note1" value="option1">
+													<label class="form-check-label" for="pc-note1">興味あり</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="pc-note2" value="option2">
+													<label class="form-check-label" for="pc-note2">興味なし</label>
+												</div>
+										 </div>
+									 </div>
+									</div>
+
+									<div class="form-row mb-4">
+										<div class="col-md-4 pr-3">
+											<p>手書きノートテイク</p>
+										</div>
+										<div class="col-md-8 pr-3">
+											<div class="form-group">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="hand-note1" value="option1">
+													<label class="form-check-label" for="hand-note1">興味あり</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="hand-note2" value="option2">
+													<label class="form-check-label" for="hand-note2">興味なし</label>
+												</div>
+										  </div>
+									  </div>
+									</div>
+
+									<div class="form-row mb-4">
+										<div class="col-md-4 pr-3">
+											<p>文字起こし・字幕付け</p>
+										</div>
+										<div class="col-md-8 pr-3">
+											<div class="form-group">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="writing1" value="option1">
+													<label class="form-check-label" for="writing1">興味あり</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="writing2" value="option2">
+													<label class="form-check-label" for="writing2">興味なし</label>
+												</div>
+										  </div>
+									  </div>
+									</div>
+
+									<div class="form-row mb-4">
+										<div class="col-md-4 pr-3">
+											<p>ガイドヘルプ</p>
+										</div>
+										<div class="col-md-8 pr-3">
+											<div class="form-group">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="guide-help1" value="option1">
+													<label class="form-check-label" for="guide-help1">興味あり</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="guide-help2" value="option2">
+													<label class="form-check-label" for="guide-help2">興味なし</label>
+												</div>
+										  </div>
+									  </div>
+									</div>
+
+									<div class="form-row mb-4">
+										<div class="col-md-4 pr-3">
+											<p>オーディオブック作成</p>
+										</div>
+										<div class="col-md-8 pr-3">
+											<div class="form-group">
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
+													<label class="form-check-label" for="audio-book1">興味あり</label>
+												</div>
+												<div class="form-check form-check-inline">
+													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
+													<label class="form-check-label" for="audio-book2">興味なし</label>
+												</div>
+										  </div>
+									  </div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>下記の項目について、あなた自身の苦手(1)-得意(5)該当番号と履修項目にチェックをつけてください（複数回答可）</p>
+								</div>
+
+								<div class="col-md-5">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check2-1">
+										<label class="form-check-label" for="check2-1">
+											パソコン
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check2-2">
+										<label class="form-check-label" for="check2-2">
+											タイピング
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check2-3">
+										<label class="form-check-label" for="check2-3">
+											手話
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check2-4">
+										<label class="form-check-label" for="check4">
+											字が速く書ける
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="check2-5">
+										<label class="form-check-label" for="check2-5">
+											英語
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>履修項目についてチェックをつけてください（複数項目可)<p>
+								</div>
+								<div class="col-md-5">
+									<div class="form-group">
+										<!-- <label for="class">履修項目</label> -->
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="check2-6">
+												<label class="form-check-label" for="check2-6">
+													簿記に関する科目を履修している
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="check2-6">
+												<label class="form-check-label" for="check2-6">
+													総計に関する科目を履修している
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="check2-6">
+												<label class="form-check-label" for="check2-6">
+													教員免許に関する科目を履修している
+												</label>
+											</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>LINEアプリの利用</p>
+								</div>
+								<div class="col-md-5 pr-3">
+									<div class="form-group">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="line-available" value="option1">
+											<label class="form-check-label" for="line-available">利用している</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="line-unavailable" value="option2">
+											<label class="form-check-label" for="line-unavailable">利用していない</label>
+										</div>
+								 </div>
+							 </div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>学生教育研究災害傷害保険（賠償付帯）</p>
+								</div>
+								<div class="col-md-5 pr-3">
+									<div class="form-group">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-subscribed" value="option1">
+											<label class="form-check-label" for="insurance1-subscribed">加入済</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-unsubscribed" value="option2">
+											<label class="form-check-label" for="insurance1-unsubscribed">未加入</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-unknown" value="option2">
+											<label class="form-check-label" for="insurance1-unknown">不明</label>
+										</div>
+								 </div>
+							 </div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>学生総合共済保険</p>
+								</div>
+								<div class="col-md-5 pr-3">
+									<div class="form-group">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-subscribed" value="option1">
+											<label class="form-check-label" for="insurance2-subscribed">加入済</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-unsubscribed" value="option2">
+											<label class="form-check-label" for="insurance2-unsubscribed">未加入</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-unknown" value="option2">
+											<label class="form-check-label" for="insurance2-unknown">不明</label>
+										</div>
+								 </div>
+							 </div>
+							</div>
+
+							<div class="form-row mb-4">
+								<div class="col-md-3 pr-3">
+									<p>※確認のため，センターでお調べしてよろしいでしょうか。</p>
+								</div>
+								<div class="col-md-5 pr-3">
+									<div class="form-group">
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="confirmation-admit" value="option1">
+											<label class="form-check-label" for="confirmation-admit">可</label>
+										</div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="confirmation-deny" value="option2">
+											<label class="form-check-label" for="confirmation-deny">不可</label>
+										</div>
+								 </div>
+							 </div>
+							</div>
+
+							<div class="form-group">
+								<label for="application-reason">学生サポーターに興味を持った理由、活動に携わる意気込み等、何かあれば記入下さい。</label>
+								<textarea class="form-control" id="application-reason" rows="3"></textarea>
+							</div>
+							
+							<input type="submit" value="送信する" class="btn btn-primary">
+				<!-- </div> -->
+			</form>
+
+			<footer class="mt-5 mb-5">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-7">
+							<div>
+								【キャンパスライフ支援センター】<br>
+								&nbsp;&nbsp;鶴甲第一キャンパス L棟1階<br>
+								&nbsp;&nbsp;TEL：078-803-5258<br>
+								&nbsp;&nbsp;EMAIL：stdnt-campuslife@office.kobe-u.ac.jp
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="p-2" id="note">
+								実際に支援に入っていただくためには、事前（登録時）に20〜30分ほどの面談を行います。<br>
+								面談には必ずご出席ください。
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div><!-- col-md-8 -->
+		<div class="col-md-2"></div>
+	</div><!-- container-fluid -->
+</div>
+</body>
+</html>
+

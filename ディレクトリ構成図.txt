@@ -1,0 +1,12 @@
+Web_test
+　├ thanks.php
+　├ form_receive.php
+　├ index.html
+　├ form.html
+　├ static
+　│　└ css
+　│　└ img
+　│　└ js
+　├ trashbox
+　├ form_old
+　└ form
