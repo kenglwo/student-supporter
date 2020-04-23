@@ -1,5 +1,27 @@
+body {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
 .jumbotron {
-    background-image: url(../img/xl_pt_00180.jpg);
-    background-size: cover;
-    background-position: center 60%;
-  }
+  background-image: url(../img/xl_pt_00180.jpg);
+  background-size: cover;
+  background-position: center 60%;
+}
+
+input {
+  /* margin-bottom: 10px; */
+}
+
+input[name="student_id"] {
+  ime-mode: disabled;
+}
+
+span.required {
+  color: red;
+  margin-left: 10px;
+}
+
+div#note {
+  border: 2px solid black;
+}
