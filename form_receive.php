@@ -54,13 +54,13 @@
 	if (in_array("統計", $class)) { $statistics = "履修している"; } 
 	if (in_array("教員免許", $class)) { $teaching = "履修している"; } 
 
-	$line = $_POST_['line'];
+	$line = $_POST['line'];
 	$insurance1_if_subscribe = $_POST['insurance1_if_subscribe'];
 	$insurance2_if_subscribe = $_POST['insurance2_if_subscribe'];
 	$if_confirmation = $_POST['if_confirmation'];
 	$application_reason = $_POST['application_reason'];
 
-	$data = "{$date}, {$name}, {$name_furigana}, {$student_id}, {$affiliation}, {$grade}, {$tel}, {$email_university}, {$email_private}, {$interest_pc_note}, {$interest_hand_note}, {$interest_caption}, {$interest_caption}, {$interest_guide}, {$interest_audiobook}, {$ability_pc}, {$ability_typing}, {$ability_sign_language}, {$ability_fast_writing}, {$ability_english}, {$boki}, {$statistics}, {$teaching}, {$line}, {$insurance1_if_subscribe}, {$insurance2_if_subscribe}, {$if_confirmation}, {$application_reason}\n";
+	$data = "{$date}, {$name}, {$name_furigana}, {$student_id}, {$affiliation}, {$grade}, {$tel}, {$email_university}, {$email_private}, {$interest_pc_note}, {$interest_hand_note}, {$interest_caption}, {$interest_guide}, {$interest_audiobook}, {$ability_pc}, {$ability_typing}, {$ability_sign_language}, {$ability_fast_writing}, {$ability_english}, {$boki}, {$statistics}, {$teaching}, {$line}, {$insurance1_if_subscribe}, {$insurance2_if_subscribe}, {$if_confirmation}, {$application_reason}\n";
 	$data_quarantined = str_replace( "\0", "", $data );
 	$data_quarantined = htmlspecialchars($data_quarantined, ENT_QUOTES, "UTF-8");
 	$data_quarantined = mb_convert_encoding($data_quarantined, "SJIS", "UTF-8");
@@ -68,6 +68,6 @@
 
 	file_put_contents($file, $data_quarantined, FILE_APPEND);
 
-	require("./send_mail.php");
+	// require("./send_mail.php");
 
 ?>
