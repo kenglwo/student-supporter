@@ -27,18 +27,18 @@
 						<!-- <div class = "form-group"> -->
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="exampleInputEmail1">氏名（漢字）</label><span class="required">※必須</span>
-									<input type="text" name="name" class="form-control" placeholder="" required><br>
+									<label for="student_name">氏名（漢字）</label><span class="required">※必須</span>
+									<input type="text" name="student_name" id="student_name" class="form-control" placeholder="" required><br>
 								</div>
 								<div class="form-group col-md-6">
-									<label for="exampleInputEmail1">氏名（ふりがな）</label><span class="required">※必須</span>
-									<input type="text" name="name_furigana" class="form-control"><br>
+									<label for="student_name_furigana">氏名（ふりがな）</label><span class="required">※必須</span>
+									<input type="text" name="student_name_furigana" id="student_name-furigana" class="form-control"><br>
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="exampleInputEmail1">学籍番号</label><span class="required">※必須</span>
+									<label for="student_id">学籍番号</label><span class="required">※必須</span>
 									<input type="text" name="student_id" class="form-control" required><br>
 								</div>
 							</div>
@@ -46,13 +46,13 @@
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<!-- TODO: 学部・研究科のセレクトボックスを作成 -->
-									<label for="exampleInputEmail1">所属</label><span class="required">※必須</span>
+									<label for="affiliation">所属</label><span class="required">※必須</span>
 									<input type="text" name="affiliation" class="form-control" placeholder="XXX学部 / XXX研究科" required><br>
 								</div>
 								
 								<div class="form-group col-md-6">
 									<label for="grade">学年</label><span class="required">※必須</span>
-									<select class="form-control" id="grade">
+									<select class="form-control" id="grade" name="grade">
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -64,14 +64,14 @@
 							</div>
 
 							
-							<label for="exampleInputEmail1">携帯電話</label>
+							<label for="tel">携帯電話</label>
 							<input type="tel" name="tel" class="form-control" placeholder="000-1111-2222"><br>
 
-							<label for="exampleInputEmail1">メールアドレス（大学から受信可)</label><span class="required">※必須</span>
-							<input type="email" name="email" class="form-control" placeholder="XXXX@YYY" required><br>
+							<label for="email_university">メールアドレス（大学から受信可)</label><span class="required">※必須</span>
+							<input type="email" name="email_university" id="email_university" class="form-control" placeholder="XXXX@YYY" required><br>
 
-							<label for="exampleInputEmail1">メールアドレス（常に利用している)</label><span class="required">※必須</span>
-							<input type="email" name="email" class="form-control" placeholder="XXXX@YYY" required><br>
+							<label for="email_private">メールアドレス（常に利用している)</label><span class="required">※必須</span>
+							<input type="email" name="email_private" id="email_private" class="form-control" placeholder="XXXX@YYY" required><br>
 
 
 							<div class="form-row mb-4">
@@ -87,11 +87,11 @@
 										<div class="col-md-8 pr-3">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="pc-note1" value="option1">
+													<input class="form-check-input" type="radio" name="interest_pc_note" id="pc-note1" value="興味あり">
 													<label class="form-check-label" for="pc-note1">興味あり</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="pc-note2" value="option2">
+													<input class="form-check-input" type="radio" name="interest_pc_note" id="pc-note2" value="興味なし">
 													<label class="form-check-label" for="pc-note2">興味なし</label>
 												</div>
 										 </div>
@@ -105,11 +105,11 @@
 										<div class="col-md-8 pr-3">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="hand-note1" value="option1">
+													<input class="form-check-input" type="radio" name="interest_hand_note" id="hand-note1" value="興味あり">
 													<label class="form-check-label" for="hand-note1">興味あり</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="hand-note2" value="option2">
+													<input class="form-check-input" type="radio" name="interest_hand_note" id="hand-note2" value="興味なし">
 													<label class="form-check-label" for="hand-note2">興味なし</label>
 												</div>
 										  </div>
@@ -123,11 +123,11 @@
 										<div class="col-md-8 pr-3">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="writing1" value="option1">
+													<input class="form-check-input" type="radio" name="interest_caption" id="writing1" value="興味あり">
 													<label class="form-check-label" for="writing1">興味あり</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="writing2" value="option2">
+													<input class="form-check-input" type="radio" name="interest_caption" id="writing2" value="興味なし">
 													<label class="form-check-label" for="writing2">興味なし</label>
 												</div>
 										  </div>
@@ -141,12 +141,12 @@
 										<div class="col-md-8 pr-3">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="guide-help1" value="option1">
+													<input class="form-check-input" type="radio" name="interest_guide" id="guide-help1" value="興味あり">
 													<label class="form-check-label" for="guide-help1">興味あり</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="guide-help2" value="option2">
-													<label class="form-check-label" for="guide-help2">興味なし</label>
+													<input class="form-check-input" type="radio" name="interest_guide" id="guide-help2" value="興味なし">
+													<label class="form-check-label" for="guide-heop2">興味なし</label>
 												</div>
 										  </div>
 									  </div>
@@ -159,11 +159,11 @@
 										<div class="col-md-8 pr-3">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">興味あり</label>
+													<input class="form-check-input" type="radio" name="interest_audiobook" id="audio-book1" value="興味あり">
+													<label class="form-check-label" for="autio-book1">興味あり</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
+													<input class="form-check-input" type="radio" name="interest_audiobook" id="audio-book2" value="興味なし">
 													<label class="form-check-label" for="audio-book2">興味なし</label>
 												</div>
 										  </div>
@@ -186,24 +186,24 @@
 										<div class="col-md-8">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">1</label>
+													<input class="form-check-input" type="radio" name="ability_pc" id="pc1" value="1">
+													<label class="form-check-label" for="pc1">1</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">2</label>
+													<input class="form-check-input" type="radio" name="ability_pc" id="pc2" value="2">
+													<label class="form-check-label" for="pc2">2</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">3</label>
+													<input class="form-check-input" type="radio" name="ability_pc" id="pc3" value="3">
+													<label class="form-check-label" for="pc3">3</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">4</label>
+													<input class="form-check-input" type="radio" name="ability_pc" id="pc4" value="4">
+													<label class="form-check-label" for="pc4">4</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">5</label>
+													<input class="form-check-input" type="radio" name="ability_pc" id="pc5" value="5">
+													<label class="form-check-label" for="pc5">5</label>
 												</div>
 											</div>
 										</div>
@@ -216,24 +216,24 @@
 										<div class="col-md-8">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">1</label>
+													<input class="form-check-input" type="radio" name="ability_typing" id="t1" value="1">
+													<label class="form-check-label" for="t1">1</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">2</label>
+													<input class="form-check-input" type="radio" name="ability_typing" id="t2" value="2">
+													<label class="form-check-label" for="t2">2</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">3</label>
+													<input class="form-check-input" type="radio" name="ability_typing" id="t3" value="3">
+													<label class="form-check-label" for="t3">3</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">4</label>
+													<input class="form-check-input" type="radio" name="ability_typing" id="t4" value="4">
+													<label class="form-check-label" for="t4">4</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">5</label>
+													<input class="form-check-input" type="radio" name="ability_typing" id="t5" value="5">
+													<label class="form-check-label" for="t5">5</label>
 												</div>
 											</div>
 										</div>
@@ -247,24 +247,24 @@
 										<div class="col-md-8">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">1</label>
+													<input class="form-check-input" type="radio" name="ability_sign_language" id="s1" value="1">
+													<label class="form-check-label" for="s1">1</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">2</label>
+													<input class="form-check-input" type="radio" name="ability_sign_language" id="s2" value="2">
+													<label class="form-check-label" for="s2">2</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">3</label>
+													<input class="form-check-input" type="radio" name="ability_sign_language" id="s3" value="3">
+													<label class="form-check-label" for="s3">3</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">4</label>
+													<input class="form-check-input" type="radio" name="ability_sign_language" id="s4" value="4">
+													<label class="form-check-label" for="s4">4</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">5</label>
+													<input class="form-check-input" type="radio" name="ability_sign_language" id="s5" value="5">
+													<label class="form-check-label" for="s5">5</label>
 												</div>
 											</div>
 										</div>
@@ -278,24 +278,24 @@
 										<div class="col-md-8">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">1</label>
+													<input class="form-check-input" type="radio" name="ability_fast_writing" id="f1" value="1">
+													<label class="form-check-label" for="f1">1</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">2</label>
+													<input class="form-check-input" type="radio" name="ability_fast_writing" id="f2" value="2">
+													<label class="form-check-label" for="f2">2</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">3</label>
+													<input class="form-check-input" type="radio" name="ability_fast_writing" id="f3" value="3">
+													<label class="form-check-label" for="f3">3</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">4</label>
+													<input class="form-check-input" type="radio" name="ability_fast_writing" id="f4" value="4">
+													<label class="form-check-label" for="f4">4</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">5</label>
+													<input class="form-check-input" type="radio" name="ability_fast_writing" id="f5" value="5">
+													<label class="form-check-label" for="f5">5</label>
 												</div>
 											</div>
 										</div>
@@ -308,24 +308,24 @@
 										<div class="col-md-8">
 											<div class="form-group">
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book1" value="option1">
-													<label class="form-check-label" for="audio-book1">1</label>
+													<input class="form-check-input" type="radio" name="ability_english" id="e1" value="1">
+													<label class="form-check-label" for="e1">1</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">2</label>
+													<input class="form-check-input" type="radio" name="ability_english" id="e2" value="2">
+													<label class="form-check-label" for="e2">2</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">3</label>
+													<input class="form-check-input" type="radio" name="ability_english" id="e3" value="3">
+													<label class="form-check-label" for="e3">3</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">4</label>
+													<input class="form-check-input" type="radio" name="ability_english" id="e4" value="4">
+													<label class="form-check-label" for="e4">4</label>
 												</div>
 												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="audio-book2" value="option2">
-													<label class="form-check-label" for="audio-book2">5</label>
+													<input class="form-check-input" type="radio" name="ability_english" id="e5" value="5">
+													<label class="form-check-label" for="e5">5</label>
 												</div>
 											</div>
 										</div>
@@ -343,20 +343,20 @@
 									<div class="form-group">
 										<!-- <label for="class">履修項目</label> -->
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="check2-6">
-												<label class="form-check-label" for="check2-6">
+												<input class="form-check-input" type="checkbox" value="簿記" name="class" id="class_boki">
+												<label class="form-check-label" for="class_boki">
 													簿記に関する科目を履修している
 												</label>
 											</div>
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="check2-6">
-												<label class="form-check-label" for="check2-6">
+												<input class="form-check-input" type="checkbox" value="統計" name="class" id="class_statistics">
+												<label class="form-check-label" for="class_statistics">
 													総計に関する科目を履修している
 												</label>
 											</div>
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="check2-6">
-												<label class="form-check-label" for="check2-6">
+												<input class="form-check-input" type="checkbox" value="教員免許" name="class" id="class_teaching">
+												<label class="form-check-label" for="class_teaching">
 													教員免許に関する科目を履修している
 												</label>
 											</div>
@@ -371,11 +371,11 @@
 								<div class="col-md-5 pr-3">
 									<div class="form-group">
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="line-available" value="option1">
+											<input class="form-check-input" type="radio" name="line" id="line-available" value="利用している">
 											<label class="form-check-label" for="line-available">利用している</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="line-unavailable" value="option2">
+											<input class="form-check-input" type="radio" name="line" id="line-unavailable" value="利用していない">
 											<label class="form-check-label" for="line-unavailable">利用していない</label>
 										</div>
 								 </div>
@@ -389,15 +389,15 @@
 								<div class="col-md-5 pr-3">
 									<div class="form-group">
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-subscribed" value="option1">
+											<input class="form-check-input" type="radio" name="insurance1-if-subscribe" id="insurance1-subscribed" value="加入済">
 											<label class="form-check-label" for="insurance1-subscribed">加入済</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-unsubscribed" value="option2">
+											<input class="form-check-input" type="radio" name="insurance1-if-subscribe" id="insurance1-unsubscribed" value="未加入">
 											<label class="form-check-label" for="insurance1-unsubscribed">未加入</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance1-unknown" value="option2">
+											<input class="form-check-input" type="radio" name="insurance1-if-subscribe" id="insurance1-unknown" value="不明">
 											<label class="form-check-label" for="insurance1-unknown">不明</label>
 										</div>
 								 </div>
@@ -411,15 +411,15 @@
 								<div class="col-md-5 pr-3">
 									<div class="form-group">
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-subscribed" value="option1">
+											<input class="form-check-input" type="radio" name="insurance2_if_subscribe" id="insurance2-subscribed" value="加入済">
 											<label class="form-check-label" for="insurance2-subscribed">加入済</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-unsubscribed" value="option2">
+											<input class="form-check-input" type="radio" name="insurance2_if_subscribe" id="insurance2-unsubscribed" value="未加入">
 											<label class="form-check-label" for="insurance2-unsubscribed">未加入</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="insurance2-unknown" value="option2">
+											<input class="form-check-input" type="radio" name="insurance2_if_subscribe" id="insurance2-unknown" value="不明">
 											<label class="form-check-label" for="insurance2-unknown">不明</label>
 										</div>
 								 </div>
@@ -433,11 +433,11 @@
 								<div class="col-md-5 pr-3">
 									<div class="form-group">
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="confirmation-admit" value="option1">
+											<input class="form-check-input" type="radio" name="if_confirmation" id="confirmation-admit" value="可">
 											<label class="form-check-label" for="confirmation-admit">可</label>
 										</div>
 										<div class="form-check form-check-inline">
-											<input class="form-check-input" type="radio" name="inlineRadioOptions" id="confirmation-deny" value="option2">
+											<input class="form-check-input" type="radio" name="if_confirmation" id="confirmation-deny" value="不可">
 											<label class="form-check-label" for="confirmation-deny">不可</label>
 										</div>
 								 </div>
@@ -446,7 +446,7 @@
 
 							<div class="form-group">
 								<label for="application-reason">学生サポーターに興味を持った理由、活動に携わる意気込み等、何かあれば記入下さい。</label>
-								<textarea class="form-control" id="application-reason" rows="3"></textarea>
+								<textarea class="form-control" id="application-reason" name="application_reason" rows="3"></textarea>
 							</div>
 							
 							<input type="submit" value="送信する" class="btn btn-primary">
